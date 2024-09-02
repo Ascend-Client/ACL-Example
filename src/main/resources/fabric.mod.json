@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "modid",
 	"version": "${version}",
-	"name": "Example mod",
+	"name": "ACL Example mod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
@@ -15,27 +15,12 @@
 	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
-		]
+		"acl": ["io.github.betterclient.example.ACLExample"]
 	},
-	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
-	],
+	"mixins": [],
 	"depends": {
-		"fabricloader": ">=0.16.2",
+		"fabricloader": "*",
 		"minecraft": "~1.21.1",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"java": ">=21"
 	}
 }
